@@ -156,10 +156,10 @@ public class RNTrackPlayer: RCTEventEmitter, AudioSessionControllerDelegate {
 
     @objc(setupPlayer:resolver:rejecter:)
     public func setupPlayer(config: [String: Any], resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
-        if hasInitialized {
-            reject("player_already_initialized", "The player has already been initialized via setupPlayer.", nil)
-            return
-        }
+        // if hasInitialized {
+        //     reject("player_already_initialized", "The player has already been initialized via setupPlayer.", nil)
+        //     return
+        // }
 
         // configure buffer size
         if let bufferDuration = config["minBuffer"] as? TimeInterval {
